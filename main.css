@@ -1,0 +1,37 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+.container {
+    margin: 80px auto;
+    max-width: 350px;
+    width: 100%;
+}
+
+form {
+    margin-top: 40px;
+}
+
+input, button, p {
+    display: block;
+    padding: 8px;
+    margin-bottom: 8px;
+    width: 100%;
+}
+
+button {
+    background-color: lightseagreen;
+    border: none;
+    text-transform: uppercase;
+    color: aliceblue;
+    font-weight: bold;
+    font-size: medium;
+}
+
+button:hover {
+    background-color: orange;
+}
+
