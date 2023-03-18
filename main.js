@@ -6,14 +6,14 @@ form.addEventListener('submit', function(e) { //sera disparado quando um evento 
     const campoB = parseInt(document.getElementById('campo-b').value);
     e.preventDefault(); // interrompe o envio do formulário
     
-    if (campoB <= campoA) {
-    mensagem.textContent = 'Erro! O Valor B deve ser maior que o Valor A!';
-    mensagem.classList.add('erro');
-    mensagem.classList.add('sucesso');
-    } else {
+    if (campoA <= campoB) {
         mensagem.textContent = 'Formulário enviado com sucesso!';
         mensagem.classList.add('sucesso');
         mensagem.classList.remove('erro');
+    } else {
+        mensagem.textContent = 'Erro! O Valor B deve ser maior que o Valor A!';
+        mensagem.classList.add('erro');
+        mensagem.classList.add('sucesso');
     }
 });
 console.log(form); //mostrar no console, a constante
