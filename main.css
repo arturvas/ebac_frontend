@@ -15,7 +15,8 @@ form {
     margin-top: 40px;
 }
 
-input, button, p {
+input, button, p,
+.sucesso, .erro {
     display: block;
     padding: 8px;
     margin-bottom: 8px;
@@ -35,3 +36,12 @@ button:hover {
     background-color: orange;
 }
 
+.sucesso {
+    background-color: lightgreen;
+    color: green;
+}
+
+.erro{
+    background-color: lightcoral;
+    color: red;
+}
