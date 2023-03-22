@@ -5,21 +5,14 @@ form.addEventListener('submit', function(e) { //sera disparado quando um evento 
     const campoA = parseInt(document.getElementById('campo-a').value); //parseInt converte para numero intero
     const campoB = parseInt(document.getElementById('campo-b').value);
     
-    if (campoB <= campoA) {
-    mensagem.textContent = 'Erro! O Valor B deve ser maior que o Valor A!';
-    mensagem.classList.add('erro');
-    mensagem.classList.add('sucesso');
-    } else {
+    if (campoB >= campoA) {
         mensagem.textContent = 'Formulário enviado com sucesso!';
         mensagem.classList.add('sucesso');
         mensagem.classList.remove('erro');
-        e.preventDefault();
     } else {
         mensagem.textContent = 'Erro! O Valor B deve ser maior que o Valor A!';
         mensagem.classList.add('erro');
         mensagem.classList.add('sucesso');
-        e.preventDefault(); // interrompe o envio do formulário
-
     }
     e.preventDefault(); // interrompe o envio do formulário
 });
