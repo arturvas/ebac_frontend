@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt_BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="main.css">
+    <title>Exercício M.10</title>
+</head>
+<body>
+    <header>
+        <h1>Exercício: módulo 10</h1>
+        <h2>Form jQuery</h2>
+    </header>
+    <section>
+        <div class="container">
+            <h2>Insira seus dados</h2>
+            <form>
+                <div class="form-campo">
+                    <label for="nome">Nome completo:</label>
+                    <input type="text" />
+                </div>
+                <div class="form-campo">
+                    <label for="email">E-mail:</label>
+                    <input type="email" />
+                </div>
+                <div class="form-campo">
+                    <label for="tel">Telefone:</label>
+                    <input type="tel" id="tel" />
+                </div>
+                <div class="form-campo">
+                    <label for="cpf">CPF:</label>
+                    <input type="tel" id="cpf"/>
+                </div>
+                <div class="form-campo">
+                    <label for="endereco">Endereco completo:</label>
+                    <input type="text" />
+                </div>
+                <div class="form-campo">
+                    <label for="cep">CEP:</label>
+                    <input type="text" id="cep"/>
+                </div>
+                <button type="submit">Enviar</button>
+            </form>
+        </div>
+    </section>
+
+    <script src="./jquery.mask.min.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            $('#cpf').mask('000.000.000-00');
+            $('#cep').mask('00.000-000');
+            $('#tel').mask('(00) 0 0000-0000');
+
+        })
+    </script>
+</body>
+</html>
+
+<!-- 
+    mascara nos campos: cpf, tel, cep
+ -->
