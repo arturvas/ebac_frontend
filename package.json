@@ -7,6 +7,7 @@
     "sass": "^1.68.0"
   },
   "scripts": {
+    "sass": "sass source/main.scss build/main.css --watch",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
