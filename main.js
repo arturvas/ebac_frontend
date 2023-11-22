@@ -9,6 +9,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
   fetch("https://api.github.com/users/arturvas")
     .then(function (response) {
+      if (!response.ok) {
+        throw new Error(`Erro na solicitação: ${response.status}`);
+      }
       return response.json();
     })
     .then(function (json) {
@@ -19,5 +22,8 @@ document.addEventListener("DOMContentLoaded", function () {
       followersElement.innerText = json.followers;
       followingElement.innerText = json.following;
       linkElement.href = json.html_url;
+    })
+    .catch(function (error) {
+      console.error("Erro na solicitação:", error);
     });
 });
